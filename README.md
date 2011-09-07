@@ -4,6 +4,26 @@ API for serializing and de-serializing JavaScript objects using the
 addon compared to the native `JSON` object is quite good, and the space
 required for serialized data is far less than JSON.
 
+### Building / Installing from npm
+   npm install msgpack2
+
+### Building / Installing from source
+   # Fetch it from github
+   cd node_modules
+   git clone git://github.com/JulesAU/node-msgpack.git msgpack2
+   cd msgpack2
+   
+   # Bootstrap the MsgPack library:
+   git submodule init
+   git submodule update
+   cd deps/msgpack-full/cpp
+   ./bootstrap
+   
+   # Now build the node-msgpack module:
+   cd ../../../
+   make
+
+
 ### Performance
 
 `node-msgpack` outperforms the built-in `JSON.stringify()` and `JSON.parse()`
