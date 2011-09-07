@@ -15,17 +15,17 @@ export CFLAGS CXXFLAGS
 
 all: msgpack
 
-msgpack: deps/msgpack/dist/lib/libmsgpack.a
+msgpack: deps/msgpack-full/cpp/dist/lib/libmsgpack.a
 	cd src && \
 		$(NODE_WAF) configure && \
 		$(NODE_WAF) build
 
 # Build the msgpack library
-deps/msgpack/dist/lib/libmsgpack.a:
-	cd deps/msgpack && \
+deps/msgpack-full/cpp/dist/lib/libmsgpack.a:
+	cd deps/msgpack-full/cpp && \
 		mkdir -p dist && \
 		./configure --enable-static --disable-shared \
-			--prefix=$(PWD)/deps/msgpack/dist && \
+			--prefix=$(PWD)/deps/msgpack-full/cpp/dist && \
 		make && \
 		make install
 
@@ -38,5 +38,5 @@ tags:
 			ctags -L - -a
 
 clean:
-	cd deps/msgpack && (make distclean || true)
-	rm -fr deps/msgpack/dist build
+	cd deps/msgpack-full/cpp && (make distclean || true)
+	rm -fr deps/msgpack-full/cpp/dist build
