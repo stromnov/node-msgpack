@@ -3,7 +3,6 @@ var msgpack = require('msgpack2');
 
 var testEqual = function(v) {
     var vv = msgpack.unpack(msgpack.pack(v));
-
     assert.deepEqual(vv, v);
 };
 
@@ -46,3 +45,4 @@ var d = {};
 for (var i = 0; i < 10; i++) {
     msgpack.pack(d);
 }
+

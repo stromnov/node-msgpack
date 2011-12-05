@@ -1,7 +1,7 @@
 // Verify that msgpack.Stream can pass multiple messages around as expected.
 
 var assert = require('assert');
-var msgpack = require('msgpack');
+var msgpack = require('msgpack2');
 var net = require('net');
 var netBindings = process.binding('net');
 var sys = require('sys');
