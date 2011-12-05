@@ -1,5 +1,5 @@
 var assert = require('assert');
-var msgpack = require('msgpack');
+var msgpack = require('msgpack2');
 
 var testEqual = function(v) {
     var vv = msgpack.unpack(msgpack.pack(v));
