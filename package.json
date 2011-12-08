@@ -1,7 +1,7 @@
 {
   "name": "msgpack2",
 	"description": "Latest version of node.js msgpack bindings",
-  "version": "0.1.5",
+  "version": "0.1.7",
 	"homepage": "https://github.com/JulesAU/node-msgpack",
 	"author": "Peter Griess <pg@std.in>",
 	"contributors": [
